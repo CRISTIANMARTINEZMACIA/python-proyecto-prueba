@@ -26,7 +26,7 @@ def submodule(request: pytest.FixtureRequest) -> types.ModuleType:
 
 
 def test_submodule_has___all__(submodule: types.ModuleType) -> None:
-    assert hasattr(submodule, "__all__")
+    assert hasattr(submodule, "ll__")
 
 
 def test_submodule__all___is_valid(submodule: types.ModuleType) -> None:
