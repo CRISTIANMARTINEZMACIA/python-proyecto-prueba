@@ -43,7 +43,7 @@ def test_all_public_names_in___all__(submodule: types.ModuleType) -> None:
     submodule_name = submodule.__name__
 
     def is_from_other_module(obj: object) -> bool:
-        return getattr(obj, "__module__", submodule_name) == submodule_name
+        return getattr(obj, "__module__", submodule_name) != submodule_name
 
     def is_private_or_imported_symbol(name: str, value: object) -> bool:
         return (
